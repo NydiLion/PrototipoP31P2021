@@ -12,10 +12,14 @@ import javax.swing.JOptionPane;
  * @author Nay Ale
  */
 public class Contenedor_MDI extends javax.swing.JFrame {
-
+private Mantenimiento_Maestros formMantenimiento_Maestros;
     /**
      * Creates new form Contenedor_MDI
      */
+    
+    //Contenedor_MDI mdi_components = new Contenedor_MDI();
+    
+    
     public Contenedor_MDI() {
         initComponents();
     }
@@ -61,11 +65,11 @@ public class Contenedor_MDI extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 682, Short.MAX_VALUE)
+            .addGap(0, 904, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 530, Short.MAX_VALUE)
         );
 
         jMenu3.setText("Abrir");
@@ -83,30 +87,75 @@ public class Contenedor_MDI extends javax.swing.JFrame {
         jMenu4.setText("Catalogos");
 
         jMenuManAlum.setText("Mantenimiento Alumno");
+        jMenuManAlum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManAlumActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManAlum);
 
         jMenuManMaes.setText("Mantenimiento Maestros");
+        jMenuManMaes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManMaesActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManMaes);
 
         jMenuManFacul.setText("Mantenimiento Facultades");
+        jMenuManFacul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManFaculActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManFacul);
 
         jMenuManCarre.setText("Mantenimiento Carreras");
+        jMenuManCarre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManCarreActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManCarre);
 
         jMenuManCursos.setText("Mantenimiento Cursos");
+        jMenuManCursos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManCursosActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManCursos);
 
         jMenuManSecc.setText("Mantenimiento Secciones");
+        jMenuManSecc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManSeccActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManSecc);
 
         jMenuManSedes.setText("Mantenimiento Sedes");
+        jMenuManSedes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManSedesActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManSedes);
 
         jMenuManAulas.setText("Mantenimiento Aulas");
+        jMenuManAulas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManAulasActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManAulas);
 
         jMenuManJor.setText("Mantenimiento Jornadas");
+        jMenuManJor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuManJorActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuManJor);
 
         jMenuBar2.add(jMenu4);
@@ -114,15 +163,35 @@ public class Contenedor_MDI extends javax.swing.JFrame {
         jMenuAsigCurAlum.setText("Procesos");
 
         jMenuItem11.setText("Asignacion Cursos Alumnos");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenuAsigCurAlum.add(jMenuItem11);
 
         jMenuAsigCurMaes.setText("Asignacion Cursos Maestros");
+        jMenuAsigCurMaes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAsigCurMaesActionPerformed(evt);
+            }
+        });
         jMenuAsigCurAlum.add(jMenuAsigCurMaes);
 
         jMenuAsigNotas.setText("Ingreso de Notas");
+        jMenuAsigNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuAsigNotasActionPerformed(evt);
+            }
+        });
         jMenuAsigCurAlum.add(jMenuAsigNotas);
 
         jMenuRecepActasR.setText("Recepción de Actas en Registro");
+        jMenuRecepActasR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuRecepActasRActionPerformed(evt);
+            }
+        });
         jMenuAsigCurAlum.add(jMenuRecepActasR);
 
         jMenuBar2.add(jMenuAsigCurAlum);
@@ -151,13 +220,11 @@ public class Contenedor_MDI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
 
         pack();
@@ -177,6 +244,59 @@ public class Contenedor_MDI extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_jMenuSalidaActionPerformed
+
+    private void jMenuManMaesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManMaesActionPerformed
+     formMantenimiento_Maestros = new Mantenimiento_Maestros();
+     jDesktopPane1.add(formMantenimiento_Maestros);
+    }//GEN-LAST:event_jMenuManMaesActionPerformed
+
+    private void jMenuManAlumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManAlumActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManAlumActionPerformed
+
+    private void jMenuManFaculActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManFaculActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManFaculActionPerformed
+
+    private void jMenuManCarreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManCarreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManCarreActionPerformed
+
+    private void jMenuManCursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManCursosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManCursosActionPerformed
+
+    private void jMenuManSeccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManSeccActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManSeccActionPerformed
+
+    private void jMenuManSedesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManSedesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManSedesActionPerformed
+
+    private void jMenuManAulasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManAulasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManAulasActionPerformed
+
+    private void jMenuManJorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuManJorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuManJorActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuAsigCurMaesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAsigCurMaesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAsigCurMaesActionPerformed
+
+    private void jMenuAsigNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAsigNotasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuAsigNotasActionPerformed
+
+    private void jMenuRecepActasRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRecepActasRActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuRecepActasRActionPerformed
 
     /**
      * @param args the command line arguments
